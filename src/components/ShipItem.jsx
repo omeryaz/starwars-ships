@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import images from "./images/Image.json";
 
 function ShipItem({ shipModel, shipHyper, shipName, id }) {
+  // Finding the right image from our JSON file
   const shipImage = images.find((item) => item.name === shipName)?.img;
 
   return (

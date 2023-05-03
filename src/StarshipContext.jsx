@@ -20,7 +20,6 @@ export const StarshipProvider = ({ children }) => {
   // Initial fetch
   useEffect(() => {
     axios("https://swapi.dev/api/starships/?page=1").then((res) => {
-      console.log(res.data);
       setStarShips([...res.data.results]);
       setNextPage(res.data.next);
       setIsLoading(false);
