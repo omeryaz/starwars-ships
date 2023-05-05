@@ -2,7 +2,9 @@
 
 This is a Star Wars Ships search app built with React that allows users to search for starships used in the Star Wars universe. The app retrieves data from the Star Wars API (SWAPI) and displays it in a user-friendly format. Users can search for ships by name or model, and click on them for further detail.
 
-## Example Images
+## Preview
+
+Live Site URL: [Star Wars Ships](https://omeryaz.github.io/starwars-ships/)
 
 ### Home Page
 
