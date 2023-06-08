@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  overscroll-behavior: none;
+}
+
 #root {
   font-family: "League Spartan", sans-serif;
   height: 100vh;
@@ -195,4 +199,5 @@ img {
 .loadmore-btn {
   font-size: small;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
