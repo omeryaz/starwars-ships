@@ -65,9 +65,8 @@ function List() {
           <button type="submit">Filter</button>
         </form>
       </div>
-      <div className="container">
-        {isLoading ? renderLoading() : renderList()}
-      </div>
+      <div className="container">{renderList()}</div>
+      {isLoading ? renderLoading() : null}
       {filterText === "" && !isLoading && isThereNext && (
         <button className="loadmore-btn" onClick={loadMore}>
           LOAD MORE

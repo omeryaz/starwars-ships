@@ -45,14 +45,17 @@ export const StarshipProvider = ({ children }) => {
 
   //Load more button
   const loadMore = () => {
-    axios(nextPage).then((res) => {
-      setStarShips([...starShips, ...res.data.results]);
-      if (res.data.next) {
-        setNextPage(res.data.next);
-      } else {
-        setIsThereNext(false);
-      }
-    });
+    setIsLoading(true);
+    axios(nextPage)
+      .then((res) => {
+        setStarShips([...starShips, ...res.data.results]);
+        if (res.data.next) {
+          setNextPage(res.data.next);
+        } else {
+          setIsThereNext(false);
+        }
+      })
+      .finally(() => setIsLoading(false));
   };
 
   const values = {
